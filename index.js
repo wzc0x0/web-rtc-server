@@ -1,4 +1,5 @@
-const io = require("socket.io")({
+const server = require('http').createServer();
+const io = require("socket.io")(server, {
     cors: {
         origin: '*'
     }
@@ -34,5 +35,5 @@ io.on('connection', (socket) => {
     });
 })
 
-io.listen(3000);
+server.listen(3000, 'localhost')
 console.log("server!")
