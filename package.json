@@ -1,0 +1,15 @@
+{
+    "name": "webrtc-server",
+    "version": "1.0.0",
+    "description": "A webrtc signal server by socket.io",
+    "main": "index.js",
+    "author": "wzc0x0@gmail.com",
+    "license": "MIT",
+    "scripts": {
+        "dev": "node index.js",
+        "start": "pm2 start npm -n singal_server -- run dev"
+    },
+    "dependencies": {
+        "socket.io": "^4.0.1"
+    }
+}
